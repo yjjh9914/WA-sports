@@ -1,0 +1,156 @@
+doctype html
+html
+  head
+    title= title
+    meta(charset='utf-8')
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+    meta(name="description", content="Impromptu Personal Website.")
+
+    link(rel="shortcut icon" href='/favicons/favicon.ico', type="image/x-icon")
+    link(rel="icon", type="image/png", sizes="192x192",  href="/android-icon-192x192.png")
+    link(rel="icon", type="image/png", sizes="32x32", href="/favicons/favicon-32x32.png")
+    link(rel="icon", type="image/png", sizes="96x96", href="/favicons/favicon-96x96.png")
+    link(rel="icon", type="image/png", sizes="16x16", href="/favicons/favicon-16x16.png")
+    link(rel="manifest", href="/favicons/manifest.json")
+    meta(name="msapplication-TileColor", content="#ffffff")
+    meta(name="msapplication-TileImage", content="/favicons/ms-icon-144x144.png")
+    meta(name="theme-color", content="#ffffff")
+
+    link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css")
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js")
+    script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js")
+    script(src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=", crossorigin="anonymous")
+  
+    link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Lobster")
+    link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Libre+Baskerville")
+    link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Abril+Fatface")
+
+    link(rel='stylesheet', href='/stylesheets/main.css')
+    script(src="/javascripts/jquery.translucent.min.js")
+    script(src="/javascripts/main.js")
+    script(src="https://hammerjs.github.io/dist/hammer.js")
+
+  body(data-spy="scroll", data-target=".navbar", data-offset="50")
+    nav.navbar.navbar-inverse.navbar-fixed-top
+      .container-fluid
+        .navbar-header
+          button.navbar-toggle(type="button", data-toggle="collapse", data-target="#myNavBar")
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a.navbar-brand#logo(href="#") Impromptu
+        div
+          .collapse.navbar-collapse#myNavBar
+            ul.nav.navbar-nav
+              li: a#mainbutton(href="#mainsection") Main
+              li: a#aboutbutton(href="#about", onclick="currentDiv = 1") About
+              li.dropdown: a.dropdown-toggle(data-toggle="dropdown", href="#") Portfolio <span class="caret"></span>
+                ul.dropdown-menu
+                  li: a(href="#devportfolio", onclick="currentDiv = 1") Dev Portfolio
+                  li: a(href="#contentsportfolio", onclick="currentDiv = 1") Contents Portfolio
+              li: a(href="#contact", onclick="currentDiv = 1") Contact
+    .container-fluid#nopaddingcontainer
+      .contents#mainsection
+        .card-wrapper
+          .tl-card-contents
+            h1#name= title
+            .content-image
+            p.text-contents
+              | <em>Jjalkey</em> CTO.<br>Freelancer Full-Stack Web / iOS Developer.<br>Contents Creator.<br>
+            p.auto-graph#facebookAutograph
+              a(href="https://www.facebook.com/edward.chang.520", target="_blank") Facebook
+            p.auto-graph#linkedinAutograph
+              a(href="https://www.linkedin.com/in/edward-joon-hyuk-chang-6a6621b7/", target="_blank") LinkedIn 
+            p.auto-graph#instagramAutograph
+              a(href="https://www.instagram.com/prepared_impromptu/", target="_blank") Instagram
+      section#about
+        .slideshow-container.swipe#slideshow
+          .mySlides
+            .slide
+              .slidecontent(onclick="plusSlides(1)")
+                h1.slidetext
+                  | Nice to meet you. My name is<br>Edward Joon-Hyuk Chang.
+            .text
+              p
+                | 1/6
+          .mySlides
+            .slide
+              .slidecontent(onclick="plusSlides(1)")
+                h1.slidetext
+                  | 20 years old, born in Los Angeles.<br>Currently in Seoul, South Korea.
+            .text
+              p
+                | 2/6
+          .mySlides
+            .slide
+              .slidecontent
+                h1.slidetext(onclick="plusSlides(1)")
+                  | CTO of <em>Jjalkey</em> and<br>Freelancer Web / iOS Developer.
+                .buttondiv
+                  a(href="#devportfolio")
+                    button(type="button").btn.btn-success.slidebutton View Portfolio
+            .text
+              p
+                | 3/6
+          .mySlides
+            .slide
+              .slidecontent
+                h1.slidetext(onclick="plusSlides(1)")
+                  | Amateur Travel Photographer<br>and Contents Creator.
+                .buttondiv
+                  a(href="#contentsportfolio")
+                    button(type="button").btn.btn-success.slidebutton View Portfolio
+            .text
+              p
+                | 4/6
+          .mySlides
+            .slide
+              .slidecontent(onclick="plusSlides(1)")
+                h1.slidetext
+                  | Hobbies? Piano, Muay Thai,<br>Longboarding, Pump It Up.
+            .text
+              p
+                | 5/6
+          .mySlides
+            .slide
+              .slidecontent(onclick="plusSlides(1)")
+                .inlineslidebuttondiv
+                  a(href="#contact")
+                    button(type="button").btn.btn-success Contact Me
+                  h1.slidetext
+                    | for Business Inquiries.
+            .text
+              p
+                | 6/6
+          a.prev(onclick="plusSlides(-1)") &#10094
+          a.next(onclick="plusSlides(1)") &#10095
+        <br>
+        .dots
+          span.dot(onclick="currentSlide(1)")
+          span.dot(onclick="currentSlide(2)")
+          span.dot(onclick="currentSlide(3)")
+          span.dot(onclick="currentSlide(4)")
+          span.dot(onclick="currentSlide(5)")
+          span.dot(onclick="currentSlide(6)")
+
+      section.parallax.intermission#portfoliointermission
+        h1
+          | Portfolio
+      section.portfolio#devportfolio
+        h1
+          | Dev Portfolio
+        .portfoliocontainer#contentspfcontainer
+      section.portfolio#contentsportfolio
+        h1
+          | Contents Portfolio
+        .portfoliocontainer#devpfcontainer
+      section.parallax.intermission#contactintermission
+        h1
+          | Contact Me
+      section#contact
+        h3
+          | Do you like what you are seeing? Think I'd be a great fit for your project?<br><br>Let me know - I don't bite ;)
+    footer.row#footrow
+      .col-md-12
+        p
+          &copy; 2017 EdwardJHChang. All rights reserved.
