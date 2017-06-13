@@ -1,0 +1,56 @@
+*{box-sizing: border-box;}
+html, body{
+	overflow-x: hidden;
+}
+body{
+	position: relative;
+}
+@font-face {
+	font-family: 'Bebas Neue';
+	src: url('/fonts/BebasNeue.ttf');
+}
+
+#logo {
+  font-family: 'Bebas Neue',serif;
+  display: inline-block;
+  color: white;
+}
+
+#nopaddingcontainer{
+	padding:0px;
+}
+
+#upcomingevents
+{
+	background: url('/images/UpcomingEvents.jpg') no-repeat center;
+	background-size: 100% !important;
+	background-attachment: inherit;
+	height: 70vh;
+	margin: 0 auto;
+	width: 100%;
+	display: -webkit-flex;
+	display: flex;
+	align-items: center;
+	text-shadow: 0.25px 0.25px 0.25px #000000;
+	justify-content: center;
+}
+
+#upcomingevents h1{
+	font-size:7em;
+	color:white;
+	align-self: center;
+	text-align: center;
+}
+
+#games{
+	background-color: 
+}
+
+@media only screen and (max-width: 600px) {
+	#upcomingevents h1{
+		font-size: 25px;
+	}
+	#upcomingevents{
+		height: 250px;
+	}
+}
