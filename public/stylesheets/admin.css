@@ -1,0 +1,16 @@
+.signedin {
+   min-height: 50px;
+   float: right;
+}
+
+.signedin p {
+   display: inline-block;
+}
+
+.signedin img {
+   display: inline-block;
+}
+
+.jumbotron.text-center {
+   clear: right;
+}

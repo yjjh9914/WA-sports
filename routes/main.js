@@ -14,4 +14,7 @@ router.get('/:sports', function (req, res, next){
 	});
 });
 
+router.use('/admin',function(req, res, next){
+	res.render('admin');
+})
 module.exports = router;
