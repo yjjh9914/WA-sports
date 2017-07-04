@@ -52,9 +52,11 @@ function getAuthUrl () {
 }
 
 app.get('/', function(req, res, next){
-	res.render('main',{
-		title: 'WA Sports'//,
-		//numberOfViewers : 100
+	var gamedata = require('./public/games/games.json');
+	console.log(gamedata);
+  res.render('main',{
+		title: 'WA Sports',
+		games: gamedata.games
 	});
 });
 

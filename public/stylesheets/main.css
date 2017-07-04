@@ -59,6 +59,11 @@ img.teamlogo{
 .gamedetails{
 	display: inline; text-align: center; margin-top: 30px;
 }
+
+.gamedetails h6{
+	display : inline;
+}
+
 @media only screen and (max-width: 1100px){
 	#upcomingevents{height:30em; margin-top:10px; }
 	#upcomingevents h1{font-size: 40px;}

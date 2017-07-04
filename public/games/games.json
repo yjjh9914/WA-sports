@@ -1,0 +1,18 @@
+{
+	"games": [
+		{
+			"team1": "Wasatch",
+			"team2": "Oponnent",
+			"sport": "Soccer",
+			"place": "Home",
+			"time": "07/04 4pm"
+		},
+		{
+			"team1": "Wasatch",
+			"team2": "Utah-Military-Academy",
+			"sport": "Baseball",
+			"place": "Away",
+			"time": "08/18 4pm"
+		}
+	]
+}
