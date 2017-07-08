@@ -38,10 +38,10 @@ html
       section#games
         - for(var i=0; i<games.length; i++){
           .row
-            .col-md-1.col-md-offset-3.col-xs-3.col-xs-offset-1
+            .col-md-2.col-md-offset-3.col-xs-3.col-xs-offset-1
               if games[i].team1 == "Wasatch"
                 img.teamlogo(src="/images/WAshield.jpg")
-            .col-md-4.col-xs-4
+            .col-md-2.col-xs-4
                 .gamedetails
                   if games[i].sport == "Soccer"
                     img.soccerIcon(src="/images/soccerIcon.png")
@@ -55,7 +55,7 @@ html
                     img.tennisIcon(src="/images/tennisIcon.png")
                   h6= games[i].time
                   h6= games[i].place     
-            .col-md-1.col-xs-3
+            .col-md-2.col-xs-3
               if games[i].team2 == "Wasatch"
                 img.teamLogo.rightlogo(src="/images/WAshield.jpg") 
               else if games[i].team2 == "Utah-Military-Academy"
