@@ -21,7 +21,7 @@ html
             span.icon-bar
             span.icon-bar
             span.icon-bar
-          a.navbar-brand#logo(href="#") WA Sports
+          a.navbar-brand#logo(href="/") WA Sports
         div
           .collapse.navbar-collapse#myNavBar
             ul.nav.navbar-nav
@@ -52,24 +52,93 @@ html
                         .col-md-2.col-xs-4
                             .gamedetails
                                 .gameinfo
-                                    if games[i].sport == "Soccer"
-                                        img.sportsIcon(src="/images/soccerIcon.png")
-                                    else if games[i].sport ==   "Baseball"
-                                        img.sportsIcon(src="/images/baseballIcon.png")
-                                    else if games[i].sport == "Volleyball"
-                                        img.sportsIcon(src="/images/  volleyballIcon.png")
-                                    else if games[i].sport == "Basketball"
-                                        img.sportsIcon(src="/images/basketballIcon.png")
-                                    else if games[i].sport == "Tennis"
-                                        img.sportsIcon(src="/images/tennisIcon.png")
+                                    img.sportsIcon(src="/images/baseballIcon.png")
                                     h6= games[i].time
                                     h6= games[i].place     
                           .col-md-2.col-xs-3
                             if games[i].team2 == "Wasatch"
                                 img.teamLogo.rightlogo(src="/images/WAshield.jpg") 
-                            else if games[i].team2 ==   "Utah-Military-Academy"
-                                img.teamlogo.rightlogo(src="/images/    Utah-Military-Academy.jpg")
+                            else if games[i].team2 == "Utah-Military-Academy"
+                                img.teamlogo.rightlogo(src="/images/Utah-Military-Academy.jpg")
                                 
             - }
-      
-          
+        if title == "soccer"
+            - for(var i=0; i<games.length; i++){
+                if games[i].sport == "Soccer"
+                    .row
+                        .col-md-2.col-md-offset-3.col-xs-3.col-xs-offset-1
+                            if games[i].team1 == "Wasatch"
+                                img.teamlogo(src="/images/WAshield.jpg")
+                        .col-md-2.col-xs-4
+                            .gamedetails
+                                .gameinfo
+                                    img.sportsIcon(src="/images/soccerIcon.png")
+                                    h6= games[i].time
+                                    h6= games[i].place     
+                          .col-md-2.col-xs-3
+                            if games[i].team2 == "Wasatch"
+                                img.teamLogo.rightlogo(src="/images/WAshield.jpg") 
+                            else if games[i].team2 == "Utah-Military-Academy"
+                                img.teamlogo.rightlogo(src="/images/Utah-Military-Academy.jpg")
+                                
+            - }
+        if title == "basketball"
+            - for(var i=0; i<games.length; i++){
+                if games[i].sport == "Basketball"
+                    .row
+                        .col-md-2.col-md-offset-3.col-xs-3.col-xs-offset-1
+                            if games[i].team1 == "Wasatch"
+                                img.teamlogo(src="/images/WAshield.jpg")
+                        .col-md-2.col-xs-4
+                            .gamedetails
+                                .gameinfo
+                                    img.sportsIcon(src="/images/basketballIcon.png")
+                                    h6= games[i].time
+                                    h6= games[i].place     
+                          .col-md-2.col-xs-3
+                            if games[i].team2 == "Wasatch"
+                                img.teamLogo.rightlogo(src="/images/WAshield.jpg") 
+                            else if games[i].team2 == "Utah-Military-Academy"
+                                img.teamlogo.rightlogo(src="/images/Utah-Military-Academy.jpg")
+                                
+            - }    
+        if title == "tennis"
+            - for(var i=0; i<games.length; i++){
+                if games[i].sport == "Tennis"
+                    .row
+                        .col-md-2.col-md-offset-3.col-xs-3.col-xs-offset-1
+                            if games[i].team1 == "Wasatch"
+                                img.teamlogo(src="/images/WAshield.jpg")
+                        .col-md-2.col-xs-4
+                            .gamedetails
+                                .gameinfo
+                                    img.sportsIcon(src="/images/tennisIcon.png")
+                                    h6= games[i].time
+                                    h6= games[i].place     
+                          .col-md-2.col-xs-3
+                            if games[i].team2 == "Wasatch"
+                                img.teamLogo.rightlogo(src="/images/WAshield.jpg") 
+                            else if games[i].team2 == "Utah-Military-Academy"
+                                img.teamlogo.rightlogo(src="/images/Utah-Military-Academy.jpg")
+                                
+            - }
+        if title == "volleyball"
+            - for(var i=0; i<games.length; i++){
+                if games[i].sport == "Volleyball"
+                    .row
+                        .col-md-2.col-md-offset-3.col-xs-3.col-xs-offset-1
+                            if games[i].team1 == "Wasatch"
+                                img.teamlogo(src="/images/WAshield.jpg")
+                        .col-md-2.col-xs-4
+                            .gamedetails
+                                .gameinfo
+                                    img.sportsIcon(src="/images/volleyballIcon.png")
+                                    h6= games[i].time
+                                    h6= games[i].place     
+                          .col-md-2.col-xs-3
+                            if games[i].team2 == "Wasatch"
+                                img.teamLogo.rightlogo(src="/images/WAshield.jpg") 
+                            else if games[i].team2 == "Utah-Military-Academy"
+                                img.teamlogo.rightlogo(src="/images/Utah-Military-Academy.jpg")
+                                
+            - }  

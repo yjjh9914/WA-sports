@@ -109,9 +109,10 @@ app.get("/upload", function(req, res) {
 })
 
 app.get('/:sports', function (req, res, next){
-	console.log(req.params.sports);
+  var gamedata = require('./public/games/games.json');
   res.render('games',{
-		title: req.params.sports
+		title: req.params.sports,
+    games: gamedata.games
 	});
 });
 // catch 404 and forward to error handler
