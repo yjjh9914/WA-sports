@@ -43,18 +43,19 @@ html
                 img.teamlogo(src="/images/WAshield.jpg")
             .col-md-2.col-xs-4
                 .gamedetails
-                  if games[i].sport == "Soccer"
-                    img.soccerIcon(src="/images/soccerIcon.png")
-                  else if games[i].sport == "Baseball"
-                    img.baseballIcon(src="/images/baseballIcon.png")
-                  else if games[i].sport == "Volleyball"
-                    img.volleyballIcon(src="/images/  volleyballIcon.png")
-                  else if games[i].sport == "Basketball"
-                    img.basketballIcon(src="/images/basketballIcon.png")
-                  else if games[i].sport == "Tennis"
-                    img.tennisIcon(src="/images/tennisIcon.png")
-                  h6= games[i].time
-                  h6= games[i].place     
+                  .gameinfo
+                    if games[i].sport == "Soccer"
+                      img.sportsIcon(src="/images/soccerIcon.png")
+                    else if games[i].sport == "Baseball"
+                      img.sportsIcon(src="/images/baseballIcon.png")
+                    else if games[i].sport == "Volleyball"
+                      img.sportsIcon(src="/images/  volleyballIcon.png")
+                    else if games[i].sport == "Basketball"
+                      img.sportsIcon(src="/images/basketballIcon.png")
+                    else if games[i].sport == "Tennis"
+                      img.sportsIcon(src="/images/tennisIcon.png")
+                    h6= games[i].time
+                    h6= games[i].place     
             .col-md-2.col-xs-3
               if games[i].team2 == "Wasatch"
                 img.teamLogo.rightlogo(src="/images/WAshield.jpg") 
