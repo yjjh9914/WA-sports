@@ -14,3 +14,33 @@ html
     link(rel='stylesheet', href='/stylesheets/games.css')
     script(src="/javascripts/games.js")
   body
+    nav.navbar.navbar-inverse.navbar-fixed-top
+      .container-fluid
+        .navbar-header
+          button.navbar-toggle(type="button", data-toggle="collapse", data-target="#myNavBar")
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a.navbar-brand#logo(href="#") WA Sports
+        div
+          .collapse.navbar-collapse#myNavBar
+            ul.nav.navbar-nav
+              li: a#baseballbutton(href="/baseball") Baseball
+              li: a#basketballbutton(href="/basketball") Basketball
+              li: a#soccerbutton(href="/soccer") Soccer
+              li: a#tennisbutton(href="tennis") Tennis
+              li: a#volleyballbutton(href="volleyball") Volleyball
+    .container-fluid#nopaddingcontainer
+      if title == "baseball"
+        #upcomingeventsBaseball
+      else if title == "basketball"
+        #upcomingeventsBasketball
+      else if title == "soccer"
+        #upcomingeventsSoccer
+      else if title == "tennis"
+        #upcomingeventsTennis
+      else if title == "volleyball"
+        #upcomingeventsVolleyball
+
+    section#games
+          

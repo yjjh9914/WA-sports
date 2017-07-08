@@ -1,0 +1,145 @@
+*{box-sizing: border-box;}
+html, body{
+	overflow-x: hidden;
+}
+body{
+	position: relative;
+}
+@font-face {
+	font-family: 'Bebas Neue';
+	src: url('/fonts/BebasNeue.ttf');
+}
+
+#logo {
+  font-family: 'Bebas Neue',serif;
+  display: inline-block;
+  color: white;
+}
+
+#nopaddingcontainer{
+	padding:0px;
+}
+
+#upcomingeventsBaseball
+{
+	background: url('/images/BaseballBackground.jpg') no-repeat center;
+	background-size: 100% !important;
+	background-attachment: inherit;
+	margin: 20px auto 0 auto;
+	width: 100%;
+	height: 40em;
+	display: -webkit-flex;
+	display: flex;
+	align-items: center;
+	text-shadow: 0.25px 0.25px 0.25px #000000;
+	justify-content: center;
+}
+
+#upcomingeventsBasketball
+{
+	background: url('/images/BasketballBackground.jpeg') no-repeat center;
+	background-size: 100% !important;
+	background-attachment: inherit;
+	margin: 20px auto 0 auto;
+	width: 100%;
+	height: 40em;
+	display: -webkit-flex;
+	display: flex;
+	align-items: center;
+	text-shadow: 0.25px 0.25px 0.25px #000000;
+	justify-content: center;
+}
+
+#upcomingeventsSoccer
+{
+	background: url('/images/SoccerBackground.jpg') no-repeat center;
+	background-size: 100% !important;
+	background-attachment: inherit;
+	margin: 20px auto 0 auto;
+	width: 100%;
+	height: 40em;
+	display: -webkit-flex;
+	display: flex;
+	align-items: center;
+	text-shadow: 0.25px 0.25px 0.25px #000000;
+	justify-content: center;
+}
+#upcomingeventsTennis
+{
+	background: url('/images/TennisBackground.jpg') no-repeat center;
+	background-size: 100% !important;
+	background-attachment: inherit;
+	margin: 20px auto 0 auto;
+	width: 100%;
+	height: 40em;
+	display: -webkit-flex;
+	display: flex;
+	align-items: center;
+	text-shadow: 0.25px 0.25px 0.25px #000000;
+	justify-content: center;
+}
+
+#upcomingeventsVolleyball
+{
+	background: url('/images/VolleyballBackground.jpg') no-repeat center;
+	background-size: 100% !important;
+	background-attachment: inherit;
+	margin: 20px auto 0 auto;
+	width: 100%;
+	height: 40em;
+	display: -webkit-flex;
+	display: flex;
+	align-items: center;
+	text-shadow: 0.25px 0.25px 0.25px #000000;
+	justify-content: center;
+}
+
+#upcomingevents h1{
+	font-size:7em;
+	color:white;
+	align-self: center;
+	text-align: center;
+}
+
+#games{
+	background-color: rgb(38,38,38);
+	height: 50em;
+	margin-top:-50px;
+}
+
+.col-md-6{
+	margin-top: 20px;
+}
+
+img.teamlogo{
+	display: inline;
+}
+
+.gamedetails{
+	display: inline; text-align: center; margin-top: 30px;
+}
+
+.gamedetails h6{
+	display : inline;
+}
+
+@media only screen and (max-width: 1100px){
+	#upcomingevents{height:30em; margin-top:10px; }
+	#upcomingevents h1{font-size: 40px;}
+}
+@media only screen and (max-width: 700px) {
+	#upcomingevents h1{
+		font-size: 25px;
+	}
+	#upcomingevents{
+		height: 300px;
+
+	}
+
+}
+@media only screen and (max-width: 450px) {
+	#upcomingevents h1{
+		font-size: 25px;}
+	#upcomingevents{
+		height: 200px; margin-top: 0px;}
+}

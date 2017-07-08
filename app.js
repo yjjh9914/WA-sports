@@ -109,8 +109,9 @@ app.get("/upload", function(req, res) {
 })
 
 app.get('/:sports', function (req, res, next){
-	res.render('games',{
-		title: req.param.sports
+	console.log(req.params.sports);
+  res.render('games',{
+		title: req.params.sports
 	});
 });
 // catch 404 and forward to error handler
